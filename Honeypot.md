@@ -6,6 +6,21 @@
     [CSDN-HFish](https://blog.csdn.net/qq_49422880/article/details/121937941)<br>
     [CentOS7](https://www.cnblogs.com/tanghaorong/p/13210794.html)<br>
     [官方手册](https://hfish.net/#/highinteractive)<br>
+    [HFish](https://blog.csdn.net/imtech/article/details/129688386)<br>
+
+   蜜罐 技术本质上是一种对攻击方进行欺骗的技术，通过布置一些作为诱饵的主机、网络服务 或者信息，诱使攻击方对它们实施攻击，从而可以对攻击行为进行捕获 和分析，了解攻击方所使用的工具与方法，推测攻击意图和动机，能够让防御方清晰地了解他们所面对的安全威胁，并通过技术和管理手段来增强实际系统的安全防护能力。
+
+ HFish是一款社区型免费蜜罐，侧重企业安全场景，从内网失陷检测、外网威胁感知、威胁情报生产三个场景出发，为用户提供可独立操作且实用的功能，通过安全、敏捷、可靠的中低交互蜜罐增加用户在失陷感知和威胁情报领域的能力。
+
+HFish采用B/S架构，系统由管理端和节点端组成，管理端用来生成和管理节点端，并接收、分析和展示节点端回传的数据，节点端接受管理端的控制并负责构建蜜罐服务。
+
+在HFish中，**管理端**只用于**数据的分析和展示**，**节点端**进行**虚拟蜜罐**，最后由**蜜罐来承受攻击**。
+
+![](https://i-blog.csdnimg.cn/blog_migrate/731f257585fb6dd960edd2efd929a1c4.png)
+
+特点：安全可靠、功能丰富、开放透明、快捷管理
+
+
 
 
 
@@ -38,6 +53,33 @@ threatbook/hfish-server:latest
 ```
 
 ![image-20250518083835591](https://zyysite.oss-cn-hangzhou.aliyuncs.com/202505180838755.png)
+
+
+
+查看扫描信息
+
+![image-20250526153907492](https://zyysite.oss-cn-hangzhou.aliyuncs.com/202505261539640.png)
+
+我们去shodan查看第一个IP信息
+
+![image-20250526154822373](https://zyysite.oss-cn-hangzhou.aliyuncs.com/202505261548546.png)
+
+
+
+考虑到SSH端口开放且有已知漏洞（CVE-2025-20465），这可能是一个蜜罐系统，用于吸引和分析潜在的网络攻击。
+由于该IP地址是通过ISP动态分配的，这种类型的IP地址通常用于临时的网络连接或测试目的。
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

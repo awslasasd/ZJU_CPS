@@ -9,7 +9,7 @@
 
 先用查壳软件查看，发现加了UPX壳
 
-![](./asserts/C2.1.png)
+![](https://zyysite.oss-cn-hangzhou.aliyuncs.com/202506051439570.png)
 
 从他的提示中可以看到`UPX -> Markus & Laszlo ver. [ LIVV ] <- from file. [ ! Modified ! ] ( sign like UPX packer )` 这个UPX壳是`!Modified`，被修改过，因此直接去壳无法实现，效果如下图所示。
 
@@ -108,7 +108,7 @@ byte_414060[32] = {
 ![image-20250521160140504](https://zyysite.oss-cn-hangzhou.aliyuncs.com/202505211601557.png)
 
 
-对加密函数进行逆向，其中，加密函数如下：
+对加密函数进行反汇编，其中，加密函数如下：
 
 ```C++
 int __cdecl Remap_TEA(int a1)
